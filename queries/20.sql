@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Potential Part Promotion Query (Q20)
+-- Function Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	s_name,
 	s_address
@@ -34,5 +40,5 @@ where
 	and s_nationkey = n_nationkey
 	and n_name = ':3'
 order by
-	s_name
-;
+	s_name;
+

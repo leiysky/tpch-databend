@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Volume Shipping Query (Q7)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	supp_nation,
 	cust_nation,
@@ -36,5 +42,5 @@ group by
 order by
 	supp_nation,
 	cust_nation,
-	l_year
-;
+	l_year;
+

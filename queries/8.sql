@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R National Market Share Query (Q8)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	o_year,
 	sum(case
@@ -34,5 +40,5 @@ from
 group by
 	o_year
 order by
-	o_year
-;
+	o_year;
+

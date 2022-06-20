@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Pricing Summary Report Query (Q1)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	l_returnflag,
 	l_linestatus,
@@ -12,10 +18,11 @@ select
 from
 	lineitem
 where
-	l_shipdate <= subtractDays(to_date('1998-12-01'), 1)
+	l_shipdate <= addDays(to_date('1998-12-01'), :1)
 group by
 	l_returnflag,
 	l_linestatus
 order by
 	l_returnflag,
 	l_linestatus;
+

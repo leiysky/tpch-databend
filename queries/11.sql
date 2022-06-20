@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Important Stock Identification Query (Q11)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	ps_partkey,
 	sum(ps_supplycost * ps_availqty) as value
@@ -13,7 +19,7 @@ group by
 	ps_partkey having
 		sum(ps_supplycost * ps_availqty) > (
 			select
-				sum(ps_supplycost * ps_availqty) * 2
+				sum(ps_supplycost * ps_availqty) * :2
 			from
 				partsupp,
 				supplier,
@@ -24,5 +30,5 @@ group by
 				and n_name = ':1'
 		)
 order by
-	value desc
-;
+	value desc;
+

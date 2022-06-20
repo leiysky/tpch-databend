@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Shipping Modes and Order Priority Query (Q12)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	l_shipmode,
 	sum(case
@@ -21,8 +27,9 @@ where
 	and l_commitdate < l_receiptdate
 	and l_shipdate < l_commitdate
 	and l_receiptdate >= to_date(':3')
-	and l_receiptdate < addYears(to_date(':3'), 1)
+	and l_receiptdate < (to_date(':3'), '1')
 group by
 	l_shipmode
 order by
 	l_shipmode;
+

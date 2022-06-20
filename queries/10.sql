@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Returned Item Reporting Query (Q10)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	c_custkey,
 	c_name,
@@ -28,5 +34,5 @@ group by
 	c_address,
 	c_comment
 order by
-	revenue desc
-;
+	revenue desc;
+

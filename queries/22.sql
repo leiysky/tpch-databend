@@ -1,3 +1,9 @@
+-- $ID$
+-- TPC-H/TPC-R Global Sales Opportunity Query (Q22)
+-- Functional Query Definition
+-- Approved February 1998
+:x
+:o
 select
 	cntrycode,
 	count(*) as numcust,
@@ -34,5 +40,5 @@ from
 group by
 	cntrycode
 order by
-	cntrycode
-;
+	cntrycode;
+
