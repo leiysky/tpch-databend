@@ -10,5 +10,5 @@ mv *.tbl /data
 export DSS_QUERY=./queries
 cat queries/1.sql
 for ((i=1;i<=22;i++)); do
-  ./qgen -v -c -s $1 ${i} > /queries/tpch-q${i}.sql
+  ./qgen -v -d -c -s $1 ${i} > /queries/tpch-q${i}.sql
 done
