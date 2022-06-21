@@ -1,4 +1,7 @@
-CREATE TABLE nation
+CREATE DATABASE IF NOT EXISTS tpch;
+USE tpch;
+
+CREATE TABLE IF NOT EXISTS ation
 (
     n_nationkey  INTEGER not null,
     n_name       STRING not null,
@@ -6,14 +9,14 @@ CREATE TABLE nation
     n_comment    STRING
 );
 
-CREATE TABLE region
+CREATE TABLE IF NOT EXISTS region
 (
     r_regionkey  INTEGER not null,
     r_name       STRING not null,
     r_comment    STRING
 );
 
-CREATE TABLE part
+CREATE TABLE IF NOT EXISTS part
 (
     p_partkey     BIGINT not null,
     p_name        STRING not null,
@@ -26,7 +29,7 @@ CREATE TABLE part
     p_comment     STRING not null
 );
 
-CREATE TABLE supplier
+CREATE TABLE IF NOT EXISTS supplier
 (
     s_suppkey     BIGINT not null,
     s_name        STRING not null,
@@ -37,7 +40,7 @@ CREATE TABLE supplier
     s_comment     STRING not null
 );
 
-CREATE TABLE partsupp
+CREATE TABLE IF NOT EXISTS partsupp
 (
     ps_partkey     BIGINT not null,
     ps_suppkey     BIGINT not null,
@@ -46,7 +49,7 @@ CREATE TABLE partsupp
     ps_comment     STRING not null
 );
 
-CREATE TABLE customer
+CREATE TABLE IF NOT EXISTS customer
 (
     c_custkey     BIGINT not null,
     c_name        STRING not null,
@@ -58,7 +61,7 @@ CREATE TABLE customer
     c_comment     STRING not null
 );
 
-CREATE TABLE orders
+CREATE TABLE IF NOT EXISTS orders
 (
     o_orderkey       BIGINT not null,
     o_custkey        BIGINT not null,
@@ -71,7 +74,7 @@ CREATE TABLE orders
     o_comment        STRING not null
 );
 
-CREATE TABLE lineitem
+CREATE TABLE IF NOT EXISTS lineitem
 (
     l_orderkey    BIGINT not null,
     l_partkey     BIGINT not null,
