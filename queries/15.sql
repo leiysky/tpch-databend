@@ -3,10 +3,10 @@
 -- Functional Query Definition
 -- Approved February 1998
 :x
-create view revenue:s (supplier_no, total_revenue) as
+create view revenue:s as
 	select
-		l_suppkey,
-		sum(l_extendedprice * (1 - l_discount))
+		l_suppkey as supplier_no,
+		sum(l_extendedprice * (1 - l_discount)) as total_revenue
 	from
 		lineitem
 	where
