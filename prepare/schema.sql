@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS tpch;
 USE tpch;
 
-CREATE TABLE IF NOT EXISTS ation
+CREATE TABLE IF NOT EXISTS nation
 (
     n_nationkey  INTEGER not null,
     n_name       STRING not null,
