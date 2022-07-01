@@ -19,7 +19,6 @@ from
 			lineitem,
 			part,
 			supplier,
-			lineitem,
 			partsupp,
 			nation
 		where
